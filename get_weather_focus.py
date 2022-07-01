@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jul  1 22:19:12 2022
-
-@author: minaguchi_kohei
-"""
-
 import json
 import urllib.request as req
 import time
