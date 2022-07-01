@@ -26,7 +26,6 @@ jobs:
         run: 
             python line_post_message.py
         env:
-            : ${{secrets.}}
             prefecture_code: ${{secrets.PREFECTURE_CODE}}
             local_code: ${{secrets.LOCAL_CODE}}
             municipality_code: ${{secrets.MUNICIPALITY_CODE}}
