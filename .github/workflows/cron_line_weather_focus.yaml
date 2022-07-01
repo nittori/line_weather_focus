@@ -22,6 +22,8 @@ jobs:
           architecture: 'x64'
       - name: Get Python version
         run: python -V
+      - name: Install dependencies
+        run: pip install requests
       - name: Run Python
         run: 
             python post_line_message.py
