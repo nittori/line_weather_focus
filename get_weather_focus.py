@@ -10,6 +10,7 @@ import urllib.request as req
 import time
 import datetime
 import os
+from dateutil import tz
 
 def get_json(area_code):
     today=time.strftime("%y%m%d")
@@ -25,10 +26,11 @@ def read_json(filename):
     with open(filename, 'r', encoding="UTF-8") as f:
         data = json.load(f)
     return data
-
-
-def get_weather_focus():
-    today = datetime.date.today()
+    
+def get_weather_focus():    
+    JST = tz.gettz('Asia/Tokyo')
+    now = datetime.datetime.now(JST)
+    today = datetime.datetime.date(now)
     
     prefecture_code=os.environ.get("prefecture_code")
     local_code=os.environ.get("local_code")
