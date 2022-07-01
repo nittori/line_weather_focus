@@ -24,7 +24,7 @@ jobs:
         run: python -V
       - name: Run Python
         run: 
-            python line_post_message.py
+            python post_line_message.py
         env:
             prefecture_code: ${{secrets.PREFECTURE_CODE}}
             local_code: ${{secrets.LOCAL_CODE}}
