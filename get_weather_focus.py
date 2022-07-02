@@ -52,6 +52,7 @@ def get_weather_focus():
         if local_code == area["area"]["code"]:
             area_name = area["area"]["name"]
             weather = area["weathers"][time_num]
+            weather = weather.replace("\u3000", "")
             continue
     
     #0-1 降水確率
